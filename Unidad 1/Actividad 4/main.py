@@ -28,8 +28,10 @@ class Libro:
 
     #método para mostrar la información completa del libro
     def mostrar_estado(self):
-        # Se usa un operador ternario para definir el texto del estado
-        estado = "Prestado" if self.prestado else "Disponible"
+        if self.prestado:
+            estado = "Prestado"
+        else:
+            estado = "Disponible"
         
         print("\nFicha del Libro:")
         print(f"Biblioteca: {Libro.biblioteca}") #atributo de clase
@@ -37,3 +39,23 @@ class Libro:
         print(f"Autor: {self.autor}")
         print(f"Año de Publicación: {self.anio_publicacion}")
         print(f"Estado: {estado}")
+
+# Script principal para usar la clase
+if __name__ == "__main__":
+    #Instanciación de tres objetos de la clase Libro
+    libro1 = Libro("Demian", "Hermann Hesse", 1919)
+    libro2 = Libro("El retrato de Dorian Gray", "Oscar Wilde", 1890)
+    libro3 = Libro("1984", "George Orwell", 1949)
+
+    #Manipulación de los objetos llamando a sus métodos
+    libro1.prestar()  #Prestar el primer libro
+    libro2.prestar()  #Prestar el segundo libro
+    libro2.devolver() #Devuelver el segundo libro
+    libro3.prestar()  #Prestar el tercer libro
+    libro3.prestar()  #Intentar prestar de nuevo para ver el mensaje de advertencia
+
+    #Muestra del estado final de cada libro
+    print("\nEstado final de los libros:")
+    libro1.mostrar_estado()
+    libro2.mostrar_estado()
+    libro3.mostrar_estado()
