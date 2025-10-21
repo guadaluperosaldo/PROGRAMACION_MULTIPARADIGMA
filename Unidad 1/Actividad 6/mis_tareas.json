@@ -1,0 +1,13 @@
+[
+    {
+        "tipo": "Normal",
+        "descripcion": "tarea de prueba",
+        "completada": false
+    },
+    {
+        "tipo": "Urgente",
+        "descripcion": "tarea urgente de prueba",
+        "completada": true,
+        "prioridad": "Alta"
+    }
+]
