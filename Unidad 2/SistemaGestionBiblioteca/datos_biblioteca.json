@@ -1,0 +1,16 @@
+{
+    "libros": [
+        {
+            "titulo": "demian",
+            "autor": "hermann hesse",
+            "year": 1919,
+            "estado": "Disponible"
+        }
+    ],
+    "usuarios": [
+        {
+            "nombre": "guadalupe",
+            "librosPrestados": []
+        }
+    ]
+}
