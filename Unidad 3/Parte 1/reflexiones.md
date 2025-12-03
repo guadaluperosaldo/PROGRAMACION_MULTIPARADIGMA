@@ -1,12 +1,12 @@
 # Parte 1
 
-Función A:
+## Función A:
 def calcular_promedio(numeros):
     return sum(numeros) / len(numeros)
 
 Esta es una función pura ya que solo devuelve el promedio, no lo asigna a variables ni imprime resultados
 
-Función B:
+## Función B:
 contador = 0
 def siguiente_id():
     global contador
@@ -21,7 +21,7 @@ def siguiente_id_pura(contadorActual):
     siguienteID = contadorActual + 1
     return f"ID--{siguienteID}"
 
-Función C:
+## Función C:
 def agregar_fecha(registro):
     from datetime import datetime
     registro['fecha'] = datetime.now().isoformat()
@@ -38,13 +38,13 @@ def agregar_fecha_pura(registro, fechaISO):
     
     return nuevo_registro
 
-Función D:
+## Función D:
 def filtrar_positivos(numeros):
     return [n for n in numeros if n > 0]
 
 Esta es una función pura ya que simplemente devuelve el resultado sin alterar nada exterior a la función
 
-Función E:
+## Función E:
 import random
 
 def mezclar_lista(lista):
